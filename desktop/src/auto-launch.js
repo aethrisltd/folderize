@@ -4,7 +4,7 @@ const { app } = require('electron');
 const log = require('electron-log');
 
 let autoLaunch = new AutoLaunch({
-    name: "Folders.pro - AI Powered Documents Organizer",
+    name: "Folderize - AI Powered Documents Organizer",
     path: app.getPath('exe'),
     isHidden: true
 });

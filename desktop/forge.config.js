@@ -2,7 +2,7 @@ const path = require('path');
 const fs = require('fs');
 
 module.exports = {
-  name: 'Folders.pro',
+  name: 'folderize',
   version: '1.8.0',
   rebuildConfig: {},
   hooks: {
@@ -13,7 +13,7 @@ module.exports = {
       }
       let packageDotJson = "";
       if (process.platform === 'darwin') {
-        packageDotJson = path.join(options.outputPaths[0], 'folders.pro.app', 'Contents', 'Resources', 'app', 'package.json');
+        packageDotJson = path.join(options.outputPaths[0], 'folderize.app', 'Contents', 'Resources', 'app', 'package.json');
       } 
       else if (process.platform === 'win32') {
         packageDotJson = path.join(options.outputPaths[0], 'resources', 'app', 'package.json');
