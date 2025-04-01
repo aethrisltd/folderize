@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document Log</title>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="is-flex">
+            <div>
+                <h1 class="title is-3">Documents Log</h1>
+            </div>
+            <div class="ml-auto">
+                <button class="button" id="clear-log-button">Clear log</button>
+            </div>
+        </div>
+        <div id="documents-log-list" class="mt-5"></div>
+    </div>
+    <template id="log-template">
+        <div class="has-background-secondary rounded p-5 mb-3">
+            <div class="columns mb-0">
+                <div class="column">
+                    <span class="icon is-hidden" id="success-icon">
+                        ✅  
+                    </span>
+                    <span class="icon is-hidden" id="error-icon">
+                        ❗
+                    </span> 
+                    <span id="file-name"></span>
+                </div>
+                <div id="datetime" class="has-text-right has-text-grey column">
+
+                </div>
+            </div>
+            <div id="message">
+
+            </div>
+        </div>
+    </template>
+</body>
+</html>

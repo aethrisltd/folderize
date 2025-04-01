@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html>
+	<head>
+    	<meta charset="UTF-8" />
+    	<title>Hello World!</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+  	</head>
+  	<body>
+		<div class="modal" id="add-folder-manually-modal">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<div class="folder has-background-secondary rounded px-5 py-5">
+					<form action="" id="new_folder_form">
+						<h3 class="title is-4">Manually add a new folder</h3>
+						<div>
+							<label class="label">Select Folder</label>
+							<div class="select-folder py-5 px-5 rounded has-background-main">
+								<span class="py-3 px-3 rounded has-background-secondary">
+									Browse
+								</span>
+								<span class="folder-path ml-4"></span>
+							</div>
+						</div>
+						<div class="mt-4">
+							<label class="label" for="folder_description">Folder Description</label>
+							<textarea class="control textarea" name="" id="folder_description" cols="10"
+								rows="5"></textarea>
+							<div class="has-text-grey-light">Write a short description of what this folder should contain.</div>
+						</div>
+						<button class="button is-primary mt-5">Add</button>
+					</form>
+				</div>
+			</div>
+			<button class="modal-close is-large" aria-label="close"></button>
+		</div>
+
+		<div class="modal" id="scan-folder-modal">
+			<div class="modal-background"></div>
+			<div class="modal-content">
+				<div class="has-background-secondary px-5 py-5 rounded">
+					<h2 class="title is-4">Choose Folder</h2>
+					<div>
+						<label class="label">Select Folder</label>
+						<div class="select-folder py-5 px-5 rounded has-background-main">
+							<span class="py-3 px-3 rounded has-background-secondary">
+								Browse
+							</span>
+							<span class="folder-path ml-4"></span>
+						</div>
+					</div>
+				</div>
+				<div class="is-hidden" id="folders-scanning-in-progress"></div>
+			</div>
+			<button class="modal-close is-large" aria-label="close"></button>
+		</div>
+
+		<div class="titlebar">
+
+		</div>
+    	<main class="container">
+			<header class="navigation mt-4">
+				<div class="tabs is-boxed is-centered">
+					<ul>
+						<li class="is-active">
+							<a class="tab-link" target="#folders-section">
+								<span>Folders</span>
+							</a>
+						</li>
+						<li>
+							<a class="tab-link" target="#settings-section">
+								<span>Settings</span>
+							</a>
+						</li>
+					</ul>
+				</div>
+			</header>
+			<section class="tab-sections" id="folders-section">
+				<h2 class="title is-3 mt-5 mb-3">Destination Folders</h2>
+				<p class="has-text-grey-light-dark mt-0 pt-0 mb-4">
+					The destination folder is where your documents will go after the AI takes a look at them and decide where
+					they should go.
+					The summary of folders is important for the AI to know what to look for in your documents.
+				</p>
+
+				<div class="rounded">
+					<div id="folders_list">
+	
+					</div>
+					<hr class="mt-2 mb-2">
+					<div class="my-5">
+						<button class="button is-primary" id="add-folder-manually-button">Add a folder</button>
+					</div>
+				</div>
+			</section>
+			<section class="tab-sections is-hidden" id="settings-section">
+				<div class="mt-3">
+					<div class="field">
+						<input id="autoStartSwitch" type="checkbox" name="autoStartSwitch" class="switch" checked="checked">
+						<label for="autoStartSwitch" class="pt-0">Auto start on login</label>
+					</div>
+					<div class="field">
+						<label for="OpenAIKey" class="pt-0">OpenAI Key</label>
+						<input id="OpenAIKey" type="text" name="OpenAIKey" class="input">
+						<button id="saveOpenAIKey" class="button is-primary mt-2">Save</button>
+					</div>
+				</div>
+			</section>
+		</main>
+	</body>
+</html>

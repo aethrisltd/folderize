@@ -1,0 +1,65 @@
+{
+  "name": "folderize",
+  "productName": "folderize",
+  "description": "AI powered files organizer",
+  "version": "1.9.0",
+  "main": ".webpack/main",
+  "private": true,
+  "author": {
+    "name": "Aethris",
+    "email": "basel@aethris.co.uk"
+  },
+  "license": "UNLICENSED",
+  "scripts": {
+    "start": "electron-forge start",
+    "package": "electron-forge package",
+    "make": "electron-forge make",
+    "publish": "electron-forge publish",
+    "test": "jest"
+  },
+  "dependencies": {
+    "any-text": "^1.2.0",
+    "auto-launch": "^5.0.6",
+    "awesome-notifications": "^3.1.3",
+    "bulma-switch": "^2.0.4",
+    "dotenv": "^16.4.7",
+    "electron-log": "^5.1.0",
+    "electron-squirrel-startup": "^1.0.0",
+    "electron-store": "^8.1.0",
+    "openai": "^4.90.0"
+  },
+  "jest": {
+    "projects": [
+      {
+        "runner": "@kayahr/jest-electron-runner/main",
+        "testEnvironment": "node"
+      }
+    ]
+  },
+  "devDependencies": {
+    "@electron-forge/cli": "^7.2.0",
+    "@electron-forge/maker-deb": "^7.2.0",
+    "@electron-forge/maker-dmg": "^7.2.0",
+    "@electron-forge/maker-rpm": "^7.2.0",
+    "@electron-forge/maker-squirrel": "^7.2.0",
+    "@electron-forge/maker-zip": "^7.2.0",
+    "@electron-forge/plugin-auto-unpack-natives": "^7.2.0",
+    "@electron-forge/plugin-webpack": "^7.2.0",
+    "@electron-forge/publisher-github": "^7.2.0",
+    "@kayahr/jest-electron-runner": "^29.6.0",
+    "@vercel/webpack-asset-relocator-loader": "^1.7.3",
+    "copy-webpack-plugin": "^12.0.2",
+    "css-loader": "^6.8.1",
+    "electron": "28.1.4",
+    "file-loader": "^6.2.0",
+    "file-replace-loader": "^1.4.0",
+    "html-loader": "^5.0.0",
+    "jest": "^29.6.1",
+    "node-loader": "^2.0.0",
+    "remove-files-webpack-plugin": "^1.5.0",
+    "sass": "^1.63.5",
+    "sass-loader": "^14.0.0",
+    "style-loader": "^3.3.3",
+    "webpack": "^5.87.0"
+  }
+}

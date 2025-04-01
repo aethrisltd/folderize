@@ -1,0 +1,89 @@
+@import url('../lib/bulma.min.css');
+@import url('../lib/bulma.dark.css');
+@import url("../../node_modules/awesome-notifications/dist/style.css");
+@import url("../../node_modules/bulma-switch/dist/css/bulma-switch.min.css");
+.titlebar {
+  -webkit-app-region: drag;
+  height: 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 1rem;
+  width: 100%;
+  color: var(--text);
+  font-size: 1.2rem;
+  font-weight: bold;
+  &.is-dragging {
+    -webkit-app-region: no-drag;
+  }
+  position: absolute;
+  z-index: -4;
+  top: 0; 
+}
+
+body, html {
+  overflow-y: auto !important;
+  position: relative;
+}
+
+.select-folder:hover {
+  cursor: pointer;
+}
+
+.is-disabled {
+  filter: brightness(50%);
+  cursor: not-allowed;
+}
+
+.container {
+  padding: 0 2rem;
+}
+
+.rounded {
+  border-radius: 1rem;
+}
+
+.remove-button {
+  border: none;
+  background: none;
+}
+
+.delete-icon {
+  width: 100%;
+  height: 100%;
+}
+
+.tabs li.is-active a {  
+  color: inherit;
+  font-weight: bold;
+}
+
+.path-display {
+  display: inline;
+}
+
+.path-part {
+  padding: 0.5rem 0.5rem;
+  background-color: var(--background);
+  position: relative;
+  margin-right: 0.7rem;
+  & a {
+    color: var(--main);
+  }
+  &::after {
+    // Add a right forwarding traingle after the path part 
+    content: "";
+    position: absolute;
+    top: 0;
+    right: -0.5rem;
+    width: 0;
+    height: 0;
+    border-top: 1rem solid transparent;
+    border-bottom: 1rem solid transparent;
+    border-left: 0.5rem solid var(--background);
+  }
+}
+
+hr {
+  margin: 0; 
+}
