@@ -1,0 +1,44 @@
+name: Build/release
+
+on:
+  push:
+    branches:
+      - master
+
+permissions:
+  contents: write
+  packages: write
+  repository-projects: write
+  security-events: write
+
+defaults:
+ run:
+  working-directory: ./desktop
+
+jobs:
+  release:
+    runs-on: ${{ matrix.os }}
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, windows-latest, macos-latest]
+
+    steps:
+      - name: Check out Git repository
+        uses: actions/checkout@v1
+
+      - name: Install Node.js, NPM and Yarn
+        uses: actions/setup-node@v3
+        with:
+          node-version: "18"
+          cache: 'yarn'
+          cache-dependency-path: "./desktop/yarn.lock"
+
+      - name: Install packages
+        run: yarn install
+
+      - name: Publish
+        run: yarn electron-forge publish 
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
