@@ -1,4 +1,7 @@
 # Folderize
+
+<img width="413" alt="Screenshot 2025-04-02 at 01 28 27" src="https://github.com/user-attachments/assets/37f80c59-8927-419a-bae1-53df63cb43b2" />
+
 Intelligent documents organiser
 
 A cross-platform desktop intelligent document organizer that uses AI to categorize and organize files into folders based on their content. It can be used to automatically sort documents, images, and other file types into appropriate folders, making it easier to manage and find files.
